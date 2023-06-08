@@ -1,20 +1,20 @@
 import java.util.Scanner;
-class reversepalindrome{
+class palindrome{
 public static void main(String args[]){
 Scanner scob=new Scanner(System.in);
-String n;
-String rs="";
-System.out.println("enter a string:");
-n=scob.next();
-int len=n.length()-1;
-for(int i=len;i>=0;i--)
+int n;
+int rd=0;
+System.out.println("enter any positive integer");
+n=scob.nextInt();
+int m=n;
+while(n>0)
 {
-rs=rs+n.charAt(i);}
-if(n.equals(rs))
-{
-System.out.println("palindrome");}
-else
-{
-System.out.println("not palindrome");}
+rd=rd*10+(n%10);
+n=n/10;
+}
+if(rd==m){
+System.out.println("is palindrome");}
+else{
+System.out.println("is not palindrome");}
 }
 }
