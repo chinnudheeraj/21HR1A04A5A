@@ -1,14 +1,13 @@
 import java.util.Scanner;
-class pattern{
+class series{
 public static void main(String args[]){
 Scanner s=new Scanner(System.in);
 int a=s.nextInt();
-for(int i=1;i<=a;i++){System.out.println();
-for(int j=1;j<=i;j++){
-System.out.print(j);
+int b=s.nextInt();
+for(int i=a;i>=0;i-=b){
+if(i<a){
+System.out.print(",");
+}
+System.out.print(i);}
 }
 }
-}
-}
-
-

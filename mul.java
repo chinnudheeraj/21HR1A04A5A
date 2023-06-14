@@ -1,8 +1,10 @@
-class mul{
-public static void main(String args[]){
-int i=2;
-byte b=45;
-double d=34.567;
-System.out.print(i*b+d/i-b);
+import java.util.ArrayList;
+class Main {
+public static void main(String[] args){
+ArrayList<Float> marks = new ArrayList<>();      
+marks.add(70f);
+marks.add(90f);
+marks.add(80f);
+System.out.println("ArrayList: " + marks);
 }
 }
