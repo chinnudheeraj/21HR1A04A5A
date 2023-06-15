@@ -1,26 +1,26 @@
 class Student{
-int rollno;
-String name;
-static String college="MTIET";
-static void change(){
-college="MTIET";
+private String name;
+private int age;
+private String getName(){return this.name;}
+private int getAge(){return this.age;}
+private void setName(String name){
+if(name.length()>0)this.name=name;
+else System.out.println("Name can be emppty");}
+private void setAge(int age){this.age=age;}
+public void display(){
+System.out.println(getName()+" "+getAge());
 }
-Student(int r,String n){
-rollno=r;
-name=n;
+public void inputStudentDetails(String n,int a){
+setName(n);setAge(a);
 }
-void display()
-{
-System.out.println(rollno+" "+name+" "+college);}
 }
-class TestStaticMethod{
+class Test{
 public static void main(String args[]){
-Student.change();
-Student s1=new Student(111,"Dheeraj");
-Student s2=new Student(222,"singh");
-Student s3=new Student(333,"ashu");
-s1.display();
-s2.display();
-s3.display();
+Student obs1=new Student();
+obs1.inputStudentDetails("Dheeraj",20);
+Student obs2=new Student();
+obs2.inputStudentDetails("",18);
+obs2.display();
 }
 }
+

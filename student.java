@@ -1,20 +1,13 @@
 class Student{
-int rollno;
-String name;
-static String college="ITS";
-Student(int r,String n){
-rollno=r;
-name=n;
+public int id;
+public String name;
 }
-void display(){
-System.out.println(rollno+" "+name+" "+college);}
-}
-class TestStaticVariable1{
+class Test{
 public static void main(String args[]){
-Student s1=new Student(111,"Dheeraj");
-Student s2=new Student(222,"singh");
-Student.college="MTIET";
-s1.display();
-s2.display();
+Student ob=new Student();
+System.out.println(ob.id+" "+ob.name);
+ob.id=465;
+ob.name="Dheeraj";
+System.out.println(ob.id+" "+ob.name);
 }
 }
